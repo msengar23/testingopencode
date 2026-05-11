@@ -50,10 +50,10 @@ LearnPlaywrightBasics2X/
 │   ├── 06_Identifier_Rules.js
 │   ├── 07_Identifier_Literals_Part02.js
 │   ├── 08_Comments.js
-│   ├── Identifier_Rules.js
-│   ├── JavaScript_Keywords.js
-│   ├── JavaScript_Keywords_VS_Code.js
-│   ├── JavaScript_Literals_VS_Code.js
+│   ├── Identifier_Rules.md
+│   ├── JavaScript_Keywords.md
+│   ├── JavaScript_Keywords_VS_Code.md
+│   ├── JavaScript_Literals_VS_Code.md
 │   └── VS_Code_KeyboardShortcuts.md
 │
 ├── .vscode/
@@ -142,7 +142,7 @@ Deep dive into JavaScript programming concepts:
 Comprehensive coverage of JavaScript identifiers, naming conventions, keywords, and literals with VS Code integration.
 
 #### 3.1 Identifier Rules
-- **Files:** `06_Identifier_Rules.js`, `Identifier_Rules.js`
+- **Files:** `06_Identifier_Rules.js`, `Identifier_Rules.md`
 - Valid identifier patterns
 - Naming conventions (camelCase, PascalCase, snake_case, SCREAMING_SNAKE_CASE)
 - Reserved keywords restrictions
@@ -165,7 +165,7 @@ Comprehensive coverage of JavaScript identifiers, naming conventions, keywords, 
 - VS Code comment/uncomment shortcuts
 
 #### 3.4 JavaScript Keywords
-- **File:** `JavaScript_Keywords.js`
+- **File:** `JavaScript_Keywords.md`
 - Declaration keywords: `var`, `let`, `const`, `function`, `class`
 - Control flow: `if`, `else`, `switch`, `case`, `try`, `catch`
 - Loop keywords: `for`, `while`, `do`, `break`, `continue`
@@ -176,7 +176,7 @@ Comprehensive coverage of JavaScript identifiers, naming conventions, keywords, 
 - Modules: `import`, `export`, `default`
 
 #### 3.5 Keywords with VS Code
-- **File:** `JavaScript_Keywords_VS_Code.js`
+- **File:** `JavaScript_Keywords_VS_Code.md`
 - All keywords with VS Code-specific tips
 - Syntax highlighting explanations
 - IntelliSense usage for each keyword
@@ -184,7 +184,7 @@ Comprehensive coverage of JavaScript identifiers, naming conventions, keywords, 
 - Keyboard shortcuts for keyword navigation
 
 #### 3.6 JavaScript Literals
-- **File:** `JavaScript_Literals_VS_Code.js`
+- **File:** `JavaScript_Literals_VS_Code.md`
 - String literals (single, double, template)
 - Number literals (integer, float, binary, octal, hex, BigInt)
 - Boolean literals (`true`, `false`)
@@ -252,9 +252,9 @@ node Chapter_01_Basics/01_Basics.js
 node Chapter03_Identifier_Literals/06_Identifier_Rules.js
 node Chapter03_Identifier_Literals/07_Identifier_Literals_Part02.js
 node Chapter03_Identifier_Literals/08_Comments.js
-node Chapter03_Identifier_Literals/JavaScript_Keywords.js
-node Chapter03_Identifier_Literals/JavaScript_Keywords_VS_Code.js
-node Chapter03_Identifier_Literals/JavaScript_Literals_VS_Code.js
+node Chapter03_Identifier_Literals/JavaScript_Keywords.md
+node Chapter03_Identifier_Literals/JavaScript_Keywords_VS_Code.md
+node Chapter03_Identifier_Literals/JavaScript_Literals_VS_Code.md
 ```
 
 ---
