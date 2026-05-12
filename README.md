@@ -14,6 +14,7 @@ A comprehensive learning repository for **JavaScript fundamentals** and **Playwr
   - [Chapter 01: Basics](#chapter-01-basics)
   - [Chapter 02: JavaScript Concepts](#chapter-02-javascript-concepts)
   - [Chapter 03: Identifiers & Literals](#chapter-03-identifiers--literals)
+  - [Chapter 04: JavaScript Concepts - Variables, Functions & Scope](#chapter-04-javascript-concepts---variables-functions--scope)
 - [VS Code Tips](#vs-code-tips)
 - [Running the Code](#running-the-code)
 - [Contributing](#contributing)
@@ -43,10 +44,10 @@ LearnPlaywrightBasics2X/
 │   ├── 03_JSCommands.js
 │   └── 04_HotCode.js
 │
-├── Chapter02_Javascript_Concept/               # JavaScript Core Concepts
+├── Chapter_02_Javascript_Concept/              # JavaScript Core Concepts
 │   └── 05_JS_Basics.js
 │
-├── Chapter03_Identifier_Literals/              # Identifiers, Keywords & Literals
+├── Chapter_03_Identifier_Literals/             # Identifiers, Keywords & Literals
 │   ├── 06_Identifier_Rules.js
 │   ├── 07_Identifier_Literals_Part02.js
 │   ├── 08_Comments.js
@@ -55,6 +56,24 @@ LearnPlaywrightBasics2X/
 │   ├── JavaScript_Keywords_VS_Code.md
 │   ├── JavaScript_Literals_VS_Code.md
 │   └── VS_Code_KeyboardShortcuts.md
+│
+├── Chapter_04_JavaScript_Concepts/             # Variables, Functions & Scope
+│   ├── 09_Var_Let_Const.js
+│   ├── 10_functions.js
+│   ├── 11_var_explained.js
+│   ├── 12_let_people_love.js
+│   ├── 13_const_explained.js
+│   ├── 14_var_functionscope.js
+│   ├── 15_let_scope.js
+│   ├── 16_Hoisting.js
+│   └── 17_hoisting_fn.js
+│
+├── Tasks_LiveClass_Code/                       # Live Class Tasks & Assignments
+│   ├── 11May_Task01_diff_let_var_const.md
+│   ├── 11May_Task02_hoisting.md
+│   ├── 11May_Task03.md
+│   ├── 11May_Task04.md
+│   └── 11May_Task05.js
 │
 ├── .vscode/
 │   └── extensions.json                         # Recommended VS Code extensions
@@ -121,7 +140,7 @@ Covers foundational JavaScript concepts:
 
 ### Chapter 02: JavaScript Concepts
 
-**File:** `Chapter02_Javascript_Concept/05_JS_Basics.js`
+**File:** `Chapter_02_Javascript_Concept/05_JS_Basics.js`
 
 Deep dive into JavaScript programming concepts:
 - Variable scoping (global vs function vs block)
@@ -137,7 +156,7 @@ Deep dive into JavaScript programming concepts:
 
 ### Chapter 03: Identifiers & Literals
 
-**Files:** `Chapter03_Identifier_Literals/`
+**Files:** `Chapter_03_Identifier_Literals/`
 
 Comprehensive coverage of JavaScript identifiers, naming conventions, keywords, and literals with VS Code integration.
 
@@ -205,6 +224,30 @@ Comprehensive coverage of JavaScript identifiers, naming conventions, keywords, 
 
 ---
 
+### Chapter 04: JavaScript Concepts - Variables, Functions & Scope
+
+**Files:** `Chapter_04_JavaScript_Concepts/`
+
+Deep dive into JavaScript variables, functions, and scoping mechanisms:
+- Variable declarations deep dive (`var`, `let`, `const`)
+- Function declarations, expressions, and arrow functions
+- Global scope, function scope, and block scope
+- Hoisting behavior for variables and functions
+- Practical examples and comparisons
+
+**Key topics:**
+- `09_Var_Let_Const.js` - Overview of variable declarations
+- `10_functions.js` - Functions in JavaScript
+- `11_var_explained.js` - Deep dive into `var`
+- `12_let_people_love.js` - Understanding `let`
+- `13_const_explained.js` - Understanding `const`
+- `14_var_functionscope.js` - Function scope with `var`
+- `15_let_scope.js` - Block scope with `let`
+- `16_Hoisting.js` - Variable and function hoisting
+- `17_hoisting_fn.js` - Function hoisting behavior
+
+---
+
 ## VS Code Tips
 
 ### Recommended Extensions
@@ -249,12 +292,22 @@ node Chapter_01_Basics/01_Basics.js
 
 ### Run All Chapter 03 Files
 ```bash
-node Chapter03_Identifier_Literals/06_Identifier_Rules.js
-node Chapter03_Identifier_Literals/07_Identifier_Literals_Part02.js
-node Chapter03_Identifier_Literals/08_Comments.js
-node Chapter03_Identifier_Literals/JavaScript_Keywords.md
-node Chapter03_Identifier_Literals/JavaScript_Keywords_VS_Code.md
-node Chapter03_Identifier_Literals/JavaScript_Literals_VS_Code.md
+node Chapter_03_Identifier_Literals/06_Identifier_Rules.js
+node Chapter_03_Identifier_Literals/07_Identifier_Literals_Part02.js
+node Chapter_03_Identifier_Literals/08_Comments.js
+```
+
+### Run Chapter 04 Files
+```bash
+node Chapter_04_JavaScript_Concepts/09_Var_Let_Const.js
+node Chapter_04_JavaScript_Concepts/10_functions.js
+node Chapter_04_JavaScript_Concepts/11_var_explained.js
+node Chapter_04_JavaScript_Concepts/12_let_people_love.js
+node Chapter_04_JavaScript_Concepts/13_const_explained.js
+node Chapter_04_JavaScript_Concepts/14_var_functionscope.js
+node Chapter_04_JavaScript_Concepts/15_let_scope.js
+node Chapter_04_JavaScript_Concepts/16_Hoisting.js
+node Chapter_04_JavaScript_Concepts/17_hoisting_fn.js
 ```
 
 ---
@@ -268,6 +321,7 @@ node Chapter03_Identifier_Literals/JavaScript_Literals_VS_Code.md
 | **Identifiers** | Rules, Conventions, Reserved Words |
 | **Keywords** | 50+ JavaScript keywords with examples |
 | **Literals** | String, Number, Boolean, Array, Object, Regex |
+| **Variables & Functions** | var/let/const, Function scope, Block scope, Hoisting |
 | **VS Code** | Shortcuts, Debugging, IntelliSense, Snippets |
 | **Best Practices** | Naming conventions, Code formatting |
 
