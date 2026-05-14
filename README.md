@@ -76,6 +76,7 @@ LearnPlaywrightBasics2X/
 ├── Chapter_05_Literal/                         # Literals in JavaScript
 │   ├── 22_literal.js
 │   ├── 23_null_undefined.js
+│   ├── 24_hoisting_tdz_research.js
 │   └── 26_Literal_Number_all.js
 │
 ├── Tasks_LiveClass_Code/                       # Live Class Tasks & Assignments
@@ -277,6 +278,7 @@ Covers all types of literals in JavaScript with practical examples:
 **Key topics:**
 - `22_literal.js` - Introduction to literals
 - `23_null_undefined.js` - `null` vs `undefined` explained with examples
+- `24_hoisting_tdz_research.js` - Comprehensive research on Hoisting & Temporal Dead Zone (TDZ) for `var`, `let`, `const`, functions, and classes
 - `26_Literal_Number_all.js` - Complete guide to all number types in JavaScript
 
 ---
@@ -351,6 +353,7 @@ node Chapter_04_JavaScript_Concepts/21_Jr_QA.js
 ```bash
 node Chapter_05_Literal/22_literal.js
 node Chapter_05_Literal/23_null_undefined.js
+node Chapter_05_Literal/24_hoisting_tdz_research.js
 node Chapter_05_Literal/26_Literal_Number_all.js
 ```
 
@@ -365,6 +368,7 @@ node Chapter_05_Literal/26_Literal_Number_all.js
 | **Identifiers** | Rules, Conventions, Reserved Words |
 | **Keywords** | 50+ JavaScript keywords with examples |
 | **Literals** | String, Number, Boolean, Array, Object, Regex, null, undefined, BigInt |
+| **Hoisting & TDZ** | var/let/const hoisting, Temporal Dead Zone, Function/Class hoisting |
 | **Variables & Functions** | var/let/const, Function scope, Block scope, Hoisting, TDZ |
 | **VS Code** | Shortcuts, Debugging, IntelliSense, Snippets |
 | **Best Practices** | Naming conventions, Code formatting |
