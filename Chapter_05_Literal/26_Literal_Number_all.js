@@ -1,161 +1,154 @@
 // ============================================================
-// Lab Exercise: All Number Types in JavaScript
+// Topic: All Number Types in JavaScript
 // File: 26_Literal_Number_all.js
 // ============================================================
 
-// -----------------------------------------------------------
-// 1. INTEGER LITERALS (Whole Numbers)
-// -----------------------------------------------------------
+/*
+  In JavaScript, numbers are ALWAYS of type "number" (except BigInt).
+  There is no separate int, float, double, etc.
+  JS uses IEEE 754 double-precision 64-bit binary format.
+*/
 
-let decimal = 42;            // Base 10 (most common)
-let hex = 0x2A;              // Base 16 (starts with 0x) → 42
-let octal = 0o52;            // Base 8  (starts with 0o) → 42
-let binary = 0b101010;       // Base 2  (starts with 0b) → 42
 
-console.log("Decimal :", decimal);   // 42
-console.log("Hex     :", hex);       // 42
-console.log("Octal   :", octal);     // 42
-console.log("Binary  :", binary);    // 42
+// --------------------------------------------------------
+// 1. INTEGER LITERALS
+// --------------------------------------------------------
 
-// -----------------------------------------------------------
-// 2. FLOATING-POINT LITERALS (Decimals)
-// -----------------------------------------------------------
+// Decimal (Base 10) - most common
+let decimal = 42;
+console.log("Decimal:", decimal); // 42
 
-let price = 19.99;
-let pi = 3.14159;
-let small = 0.001;
-let big = 1.0;               // Treated as integer 1
+// Binary (Base 2) - starts with 0b or 0B
+let binary = 0b1010; // 10 in decimal
+console.log("Binary 0b1010:", binary); // 10
 
-console.log("\nFloats  :", price, pi, small, big);
+// Octal (Base 8) - starts with 0o or 0O
+let octal = 0o52; // 42 in decimal
+console.log("Octal 0o52:", octal); // 42
 
-// -----------------------------------------------------------
-// 3. SCIENTIFIC / EXPONENTIAL NOTATION
-// -----------------------------------------------------------
+// Hexadecimal (Base 16) - starts with 0x or 0X
+let hex = 0x2A; // 42 in decimal
+console.log("Hexadecimal 0x2A:", hex); // 42
 
-let million = 1e6;           // 1 × 10^6 = 1,000,000
-let tiny = 1e-6;             // 1 × 10^-6 = 0.000001
-let science = 3.14e2;        // 3.14 × 10^2 = 314
 
-console.log("\n1e6     :", million);   // 1000000
-console.log("1e-6    :", tiny);        // 0.000001
-console.log("3.14e2  :", science);     // 314
+// --------------------------------------------------------
+// 2. FLOATING-POINT LITERALS
+// --------------------------------------------------------
 
-// -----------------------------------------------------------
-// 4. UNDERSCORES IN NUMBERS (ES2021+)
-// -----------------------------------------------------------
-// Makes large numbers easier to read
+let float1 = 3.14;
+let float2 = -0.5;
+let float3 = .5;    // valid, but avoid for readability
+let float4 = 5.;    // valid, but avoid for readability
 
-let billion = 1_000_000_000;
-let binaryGrouped = 0b1010_1010;
-let hexGrouped = 0xFF_FF;
+console.log("Float 3.14:", float1);
+console.log("Float -0.5:", float2);
+console.log("Float .5:", float3);
+console.log("Float 5.:", float4);
 
-console.log("\n1Billion:", billion);            // 1000000000
-console.log("BinaryGrouped:", binaryGrouped);   // 170
-console.log("HexGrouped:", hexGrouped);         // 65535
+// Exponential notation
+let exp1 = 1.5e3;   // 1.5 * 10^3 = 1500
+let exp2 = 1.5e-3;  // 1.5 * 10^-3 = 0.0015
+let exp3 = 2E10;    // 2 * 10^10 = 20000000000
 
-// -----------------------------------------------------------
-// 5. BIGINT (Whole numbers larger than (2^53 - 1))
-// -----------------------------------------------------------
-// Suffix with 'n' to create a BigInt
+console.log("Exponential 1.5e3:", exp1);   // 1500
+console.log("Exponential 1.5e-3:", exp2);  // 0.0015
+console.log("Exponential 2E10:", exp3);    // 20000000000
 
-let huge = 9007199254740993n;
-let bigFromNumber = BigInt(123);
-let sumBig = huge + 10n;
 
-console.log("\nBigInt  :", huge);
-console.log("BigSum  :", sumBig);
-console.log("typeof huge:", typeof huge);    // "bigint"
+// --------------------------------------------------------
+// 3. NUMERIC SEPARATORS (ES2021+)
+// --------------------------------------------------------
 
-// NOTE: You cannot mix BigInt and Number directly
-// let bad = huge + 10;  // ❌ TypeError
+let million = 1_000_000;
+let binarySep = 0b1010_0001;
+let hexSep = 0xFF_FF;
 
-// -----------------------------------------------------------
-// 6. SPECIAL NUMERIC VALUES
-// -----------------------------------------------------------
+console.log("Separator 1_000_000:", million);      // 1000000
+console.log("Separator 0b1010_0001:", binarySep);  // 161
+console.log("Separator 0xFF_FF:", hexSep);         // 65535
 
-console.log("\n--- Special Values ---");
 
-// Infinity: result of dividing by zero or overflow
-console.log("1 / 0   :", 1 / 0);           // Infinity
-console.log("-1 / 0  :", -1 / 0);          // -Infinity
+// --------------------------------------------------------
+// 4. BIGINT - For arbitrarily large integers
+// --------------------------------------------------------
+
+let big = 123456789012345678901234567890n;
+let big2 = BigInt("123456789012345678901234567890");
+let bigFromNum = BigInt(42);
+
+console.log("BigInt literal:", big);
+console.log("BigInt from string:", big2);
+console.log("BigInt from number:", bigFromNum);
+console.log("typeof BigInt:", typeof big); // "bigint"
+
+// BigInt operations
+console.log("BigInt + 1n:", big + 1n);
+// Cannot mix BigInt with Number: 10n + 5 -> TypeError
+
+
+// --------------------------------------------------------
+// 5. SPECIAL NUMERIC VALUES
+// --------------------------------------------------------
+
+// Infinity
+console.log("Infinity:", Infinity);           // Infinity
+console.log("1 / 0:", 1 / 0);                 // Infinity
+console.log("-1 / 0:", -1 / 0);               // -Infinity
 console.log("typeof Infinity:", typeof Infinity); // "number"
 
-// NaN: Not-a-Number (invalid numeric operation)
-console.log("0 / 0   :", 0 / 0);           // NaN
-console.log("'abc'/2 :", "abc" / 2);       // NaN
-console.log("typeof NaN:", typeof NaN);    // "number"  (quirky!)
+// -Infinity
+console.log("-Infinity:", -Infinity);
 
-// -----------------------------------------------------------
-// 7. NUMBER PROPERTIES
-// -----------------------------------------------------------
+// NaN (Not a Number) - result of invalid math
+console.log("NaN:", NaN);                     // NaN
+console.log("0 / 0:", 0 / 0);                 // NaN
+console.log("'hello' * 2:", "hello" * 2);     // NaN
+console.log("typeof NaN:", typeof NaN);       // "number" (quirky!)
 
-console.log("\n--- Number Constants ---");
-console.log("MAX_VALUE:", Number.MAX_VALUE);         // ~1.79e+308
-console.log("MIN_VALUE:", Number.MIN_VALUE);         // ~5e-324
+
+
+
+// --------------------------------------------------------
+// 7. NUMBER PROPERTIES (Constants)
+// --------------------------------------------------------
+
+console.log("\n--- Number Properties ---");
+console.log("MAX_VALUE:", Number.MAX_VALUE);             // ~1.79e308
+console.log("MIN_VALUE:", Number.MIN_VALUE);             // ~5e-324
 console.log("MAX_SAFE_INTEGER:", Number.MAX_SAFE_INTEGER); // 9007199254740991
 console.log("MIN_SAFE_INTEGER:", Number.MIN_SAFE_INTEGER); // -9007199254740991
 console.log("POSITIVE_INFINITY:", Number.POSITIVE_INFINITY);
 console.log("NEGATIVE_INFINITY:", Number.NEGATIVE_INFINITY);
-console.log("NaN constant:", Number.NaN);
-console.log("EPSILON:", Number.EPSILON);             // smallest difference between 2 numbers
+console.log("NaN property:", Number.NaN);
+console.log("EPSILON:", Number.EPSILON);                 // smallest diff between 2 numbers
 
-// -----------------------------------------------------------
-// 8. NUMBER vs PRIMITIVE
-// -----------------------------------------------------------
 
-let primitiveNum = 100;          // primitive
-let objectNum = new Number(100); // Number object (rarely used)
+// --------------------------------------------------------
+// 8. NUMBER METHODS
+// --------------------------------------------------------
 
-console.log("\nPrimitive:", typeof primitiveNum);   // "number"
-console.log("Object   :", typeof objectNum);        // "object"
-console.log("Value    :", objectNum.valueOf());      // 100
 
-// -----------------------------------------------------------
-// 9. typeof CHECK
-// -----------------------------------------------------------
+// --------------------------------------------------------
+// SUMMARY TABLE
+// --------------------------------------------------------
 
-console.log("\n--- typeof checks ---");
-console.log("typeof 42     :", typeof 42);          // "number"
-console.log("typeof 3.14   :", typeof 3.14);        // "number"
-console.log("typeof 1n     :", typeof 1n);          // "bigint"
-console.log("typeof NaN    :", typeof NaN);         // "number"
-console.log("typeof Infinity:", typeof Infinity);   // "number"
+/*
+  | Type/Form          | Example            | Notes                          |
+  |--------------------|--------------------|--------------------------------|
+  | Decimal Integer    | 42                 | Standard whole numbers         |
+  | Binary             | 0b1010             | Base 2, starts with 0b         |
+  | Octal              | 0o52               | Base 8, starts with 0o         |
+  | Hexadecimal        | 0x2A               | Base 16, starts with 0x        |
+  | Float              | 3.14               | Decimal numbers                |
+  | Exponential        | 1.5e3              | Scientific notation            |
+  | Numeric Separator  | 1_000_000          | ES2021+, for readability       |
+  | BigInt             | 123n or BigInt(123)| Arbitrary large integers       |
+  | Infinity           | Infinity           | Result of division by zero     |
+  | NaN                | NaN                | Invalid numeric operation      |
+  | Number Object      | new Number(42)     | Avoid, use primitive           |
+*/
 
-// -----------------------------------------------------------
-// 10. isNaN() vs Number.isNaN()
-// -----------------------------------------------------------
-
-console.log("\n--- NaN Checks ---");
-console.log("isNaN('abc')      :", isNaN("abc"));        // true (converts first)
-console.log("Number.isNaN('abc'):", Number.isNaN("abc")); // false (strict, no conversion)
-console.log("Number.isNaN(NaN) :", Number.isNaN(NaN));   // true
-
-// -----------------------------------------------------------
-// 11. PARSING STRINGS TO NUMBERS
-// -----------------------------------------------------------
-
-console.log("\n--- Parsing ---");
-console.log("parseInt('42')    :", parseInt("42"));         // 42
-console.log("parseInt('0x2A')  :", parseInt("0x2A", 16));   // 42 (base 16)
-console.log("parseFloat('3.14'):", parseFloat("3.14"));     // 3.14
-console.log("Number('99')      :", Number("99"));           // 99
-
-// -----------------------------------------------------------
-// 12. HEX / OCTAL / BINARY CONVERSION
-// -----------------------------------------------------------
-
-let num = 255;
-console.log("\n--- Conversions ---");
-console.log("255 → Hex   :", num.toString(16));     // "ff"
-console.log("255 → Octal :", num.toString(8));      // "377"
-console.log("255 → Binary:", num.toString(2));      // "11111111"
 
 // ============================================================
-// SUMMARY
-// ============================================================
-// 1. JavaScript has ONE number type: "number" (double-precision 64-bit float)
-// 2. BigInt is a SEPARATE type for arbitrarily large integers
-// 3. Special values: Infinity, -Infinity, NaN
-// 4. Notation styles: decimal, hex (0x), octal (0o), binary (0b), scientific (e)
-// 5. Underscores (1_000_000) improve readability in modern JS
+// END
 // ============================================================

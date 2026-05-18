@@ -16,6 +16,7 @@ A comprehensive learning repository for **JavaScript fundamentals** and **Playwr
   - [Chapter 03: Identifiers & Literals](#chapter-03-identifiers--literals)
   - [Chapter 04: JavaScript Concepts - Variables, Functions & Scope](#chapter-04-javascript-concepts---variables-functions--scope)
   - [Chapter 05: Literals](#chapter-05-literals)
+  - [Chapter 06: Operators](#chapter-06-operators)
 - [VS Code Tips](#vs-code-tips)
 - [Running the Code](#running-the-code)
 - [Contributing](#contributing)
@@ -76,15 +77,37 @@ LearnPlaywrightBasics2X/
 ├── Chapter_05_Literal/                         # Literals in JavaScript
 │   ├── 22_literal.js
 │   ├── 23_null_undefined.js
-│   ├── 24_hoisting_tdz_research.js
-│   └── 26_Literal_Number_all.js
+│   ├── 24_null.js
+│   ├── 25_Literal_All.js
+│   ├── 26_Literal_Number_all.js
+│   ├── 27_String.js
+│   ├── 28_Template_Literal.js
+│   └── 29_Backtick_single_double.js
+│
+├── Chapter_06_Operator/                        # Operators in JavaScript
+│   ├── 30_Operator.js
+│   ├── 31_Arithmetic_Operator.js
+│   ├── 32_Modulus_Operator.js
+│   ├── 33_Expo_Operator.js
+│   ├── 34_IQ.js
+│   ├── 35_Comparison_Operator.js
+│   ├── 36_Comparison_Strict_loose.js
+│   ├── 37_IQ_Loose_Strict.js
+│   ├── 38_Confusing_Comparison.js
+│   ├── 39_Logical_Operator.js
+│   ├── 40_String_Con_Operator.js
+│   ├── 41_Ternary_Operator.js
+│   ├── 42_Type_Operator.js
+│   ├── 43_Incre_Decre_Operator.js
+│   └── 44_Null_Operator.js
 │
 ├── Tasks_LiveClass_Code/                       # Live Class Tasks & Assignments
 │   ├── 11May_Task01_diff_let_var_const.md
 │   ├── 11May_Task02_hoisting.md
 │   ├── 11May_Task03.md
 │   ├── 11May_Task04.md
-│   └── 11May_Task05.js
+│   ├── 11May_Task05.js
+│   └── 13May_Task_hoisting_tdz_research.js
 │
 ├── .vscode/
 │   └── extensions.json                         # Recommended VS Code extensions
@@ -272,14 +295,58 @@ Covers all types of literals in JavaScript with practical examples:
 - Number literals (integer, float, binary, octal, hex, BigInt)
 - Special numeric values (`Infinity`, `-Infinity`, `NaN`)
 - `null` vs `undefined` — differences, use-cases, and `typeof` behavior
+- String literals (single quotes, double quotes)
+- Template literals (backticks) with variable interpolation and multi-line strings
+- Comparison of single quote vs double quote vs backtick
 - Scientific notation and numeric separators
 - Number parsing and base conversions
 
 **Key topics:**
 - `22_literal.js` - Introduction to literals
 - `23_null_undefined.js` - `null` vs `undefined` explained with examples
-- `24_hoisting_tdz_research.js` - Comprehensive research on Hoisting & Temporal Dead Zone (TDZ) for `var`, `let`, `const`, functions, and classes
+- `24_null.js` - `null` literal basics and `typeof` behavior
+- `25_Literal_All.js` - All number literal types (hex, octal, scientific notation)
 - `26_Literal_Number_all.js` - Complete guide to all number types in JavaScript
+- `27_String.js` - String literals with single and double quotes
+- `28_Template_Literal.js` - Template literals with real-world Playwright examples
+- `29_Backtick_single_double.js` - Comparison of `''`, `""`, and `` ` ` `` with use-cases
+
+---
+
+### Chapter 06: Operators
+
+**Files:** `Chapter_06_Operator/`
+
+Comprehensive coverage of JavaScript operators with practical examples:
+- Assignment operators (`=`)
+- Arithmetic operators (`+`, `-`, `*`, `/`)
+- Modulus operator (`%`)
+- Exponentiation operator (`**`)
+- Comparison operators (`==`, `!=`, `===`, `!==`, `>`, `<`, `>=`, `<=`)
+- Strict vs loose equality differences
+- Logical operators (`&&`, `||`, `!`)
+- String concatenation operator
+- Ternary/conditional operator (`? :`)
+- Type operators (`typeof`, `instanceof`)
+- Increment/decrement operators (`++`, `--`)
+- Nullish coalescing operator (`??`)
+
+**Key topics:**
+- `30_Operator.js` - Assignment operator basics
+- `31_Arithmetic_Operator.js` - Arithmetic operations
+- `32_Modulus_Operator.js` - Modulus/remainder operations
+- `33_Expo_Operator.js` - Exponentiation operations
+- `34_IQ.js` - Interview questions on operators
+- `35_Comparison_Operator.js` - Comparison operations
+- `36_Comparison_Strict_loose.js` - Strict (`===`) vs loose (`==`) equality
+- `37_IQ_Loose_Strict.js` - Interview questions on equality comparisons
+- `38_Confusing_Comparison.js` - Tricky comparison scenarios
+- `39_Logical_Operator.js` - AND, OR, NOT logical operations
+- `40_String_Con_Operator.js` - String concatenation
+- `41_Ternary_Operator.js` - Ternary/conditional operator
+- `42_Type_Operator.js` - `typeof` and type checking
+- `43_Incre_Decre_Operator.js` - Increment and decrement operations
+- `44_Null_Operator.js` - Nullish coalescing operator (`??`)
 
 ---
 
@@ -353,8 +420,31 @@ node Chapter_04_JavaScript_Concepts/21_Jr_QA.js
 ```bash
 node Chapter_05_Literal/22_literal.js
 node Chapter_05_Literal/23_null_undefined.js
-node Chapter_05_Literal/24_hoisting_tdz_research.js
+node Chapter_05_Literal/24_null.js
+node Chapter_05_Literal/25_Literal_All.js
 node Chapter_05_Literal/26_Literal_Number_all.js
+node Chapter_05_Literal/27_String.js
+node Chapter_05_Literal/28_Template_Literal.js
+node Chapter_05_Literal/29_Backtick_single_double.js
+```
+
+### Run Chapter 06 Files
+```bash
+node Chapter_06_Operator/30_Operator.js
+node Chapter_06_Operator/31_Arithmetic_Operator.js
+node Chapter_06_Operator/32_Modulus_Operator.js
+node Chapter_06_Operator/33_Expo_Operator.js
+node Chapter_06_Operator/34_IQ.js
+node Chapter_06_Operator/35_Comparison_Operator.js
+node Chapter_06_Operator/36_Comparison_Strict_loose.js
+node Chapter_06_Operator/37_IQ_Loose_Strict.js
+node Chapter_06_Operator/38_Confusing_Comparison.js
+node Chapter_06_Operator/39_Logical_Operator.js
+node Chapter_06_Operator/40_String_Con_Operator.js
+node Chapter_06_Operator/41_Ternary_Operator.js
+node Chapter_06_Operator/42_Type_Operator.js
+node Chapter_06_Operator/43_Incre_Decre_Operator.js
+node Chapter_06_Operator/44_Null_Operator.js
 ```
 
 ---
@@ -367,9 +457,10 @@ node Chapter_05_Literal/26_Literal_Number_all.js
 | **Concepts** | Scope, Hoisting, Type Coercion, Comparisons |
 | **Identifiers** | Rules, Conventions, Reserved Words |
 | **Keywords** | 50+ JavaScript keywords with examples |
-| **Literals** | String, Number, Boolean, Array, Object, Regex, null, undefined, BigInt |
+| **Literals** | String, Number, Boolean, Array, Object, Regex, null, undefined, BigInt, Template Literals |
 | **Hoisting & TDZ** | var/let/const hoisting, Temporal Dead Zone, Function/Class hoisting |
 | **Variables & Functions** | var/let/const, Function scope, Block scope, Hoisting, TDZ |
+| **Operators** | Arithmetic, Comparison, Logical, Ternary, Type, String, Nullish Coalescing |
 | **VS Code** | Shortcuts, Debugging, IntelliSense, Snippets |
 | **Best Practices** | Naming conventions, Code formatting |
 
@@ -401,4 +492,4 @@ Created for learning JavaScript and Playwright automation testing basics.
 
 ---
 
-*Last updated: May 2026*
+*Last updated: May 18, 2026*
