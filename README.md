@@ -99,7 +99,10 @@ LearnPlaywrightBasics2X/
 │   ├── 41_Ternary_Operator.js
 │   ├── 42_Type_Operator.js
 │   ├── 43_Incre_Decre_Operator.js
-│   └── 44_Null_Operator.js
+│   ├── 44_Null_Operator.js
+│   ├── 45_Post_Increment.js
+│   ├── 46_IQ_INCREMENT_D.js
+│   └── 47_Advance_ID_.js
 │
 ├── Tasks_LiveClass_Code/                       # Live Class Tasks & Assignments
 │   ├── 11May_Task01_diff_let_var_const.md
@@ -107,7 +110,10 @@ LearnPlaywrightBasics2X/
 │   ├── 11May_Task03.md
 │   ├── 11May_Task04.md
 │   ├── 11May_Task05.js
-│   └── 13May_Task_hoisting_tdz_research.js
+│   ├── 13May_Task_hoisting_tdz_research.js
+│   ├── 18May_Task01_MaxNum_Two_Ternary.js
+│   ├── 18May_Task02_MaxNumber_Three_Ternary.js
+│   └── 18MAy_Task03_Incre_Decre.js
 │
 ├── .vscode/
 │   └── extensions.json                         # Recommended VS Code extensions
@@ -347,6 +353,24 @@ Comprehensive coverage of JavaScript operators with practical examples:
 - `42_Type_Operator.js` - `typeof` and type checking
 - `43_Incre_Decre_Operator.js` - Increment and decrement operations
 - `44_Null_Operator.js` - Nullish coalescing operator (`??`)
+- `45_Post_Increment.js` - Post-increment (`a++`) behavior
+- `46_IQ_INCREMENT_D.js` - Interview questions on increment/decrement
+- `47_Advance_ID_.js` - Advanced increment/decrement expressions
+
+### Tasks - Live Class Code
+
+**Files:** `Tasks_LiveClass_Code/`
+
+Hands-on tasks and assignments from live classes:
+- `11May_Task01_diff_let_var_const.md` - Differences between `let`, `var`, and `const`
+- `11May_Task02_hoisting.md` - Hoisting concepts
+- `11May_Task03.md` - Practice tasks
+- `11May_Task04.md` - Practice tasks
+- `11May_Task05.js` - Coding exercise
+- `13May_Task_hoisting_tdz_research.js` - Hoisting and TDZ research
+- `18May_Task01_MaxNum_Two_Ternary.js` - Find max of two numbers using ternary operator
+- `18May_Task02_MaxNumber_Three_Ternary.js` - Find max of three numbers using ternary operator
+- `18MAy_Task03_Incre_Decre.js` - Complex increment/decrement expression evaluation
 
 ---
 
@@ -445,6 +469,18 @@ node Chapter_06_Operator/41_Ternary_Operator.js
 node Chapter_06_Operator/42_Type_Operator.js
 node Chapter_06_Operator/43_Incre_Decre_Operator.js
 node Chapter_06_Operator/44_Null_Operator.js
+node Chapter_06_Operator/45_Post_Increment.js
+node Chapter_06_Operator/46_IQ_INCREMENT_D.js
+node Chapter_06_Operator/47_Advance_ID_.js
+```
+
+### Run Tasks Files
+```bash
+node Tasks_LiveClass_Code/11May_Task05.js
+node Tasks_LiveClass_Code/13May_Task_hoisting_tdz_research.js
+node Tasks_LiveClass_Code/18May_Task01_MaxNum_Two_Ternary.js
+node Tasks_LiveClass_Code/18May_Task02_MaxNumber_Three_Ternary.js
+node Tasks_LiveClass_Code/18MAy_Task03_Incre_Decre.js
 ```
 
 ---
@@ -492,4 +528,4 @@ Created for learning JavaScript and Playwright automation testing basics.
 
 ---
 
-*Last updated: May 18, 2026*
+*Last updated: May 19, 2026*
